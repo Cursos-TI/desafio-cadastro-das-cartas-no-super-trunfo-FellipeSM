@@ -1,31 +1,21 @@
 #include <stdio.h>
 
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+    //Variaveis 
     //Carta 1
-    char estado1[50] = "a";
-    char codigocard1[10] = "a";
-    char Cidade1[50] = "a";
-    int populacao1 = 0;
+    char estado1[50] = "a", codigocard1[10] = "a", Cidade1[50] = "a";
+    unsigned long int populacao1 = 0;
     int Pontoturistico1 = 0;
-    float areakm1 = 0;
-    float PIB1 = 0;
+    float areakm1 = 0, PIB1 = 0;
 
     //carta 2
-    char estado2[50] = "a";
-    char codigocard2[10] = "a";
-    char Cidade2[50] = "a";
-    int populacao2 = 0;
+    char estado2[50] = "a", Cidade2[50] = "a", codigocard2[10] = "a";
+    unsigned long int populacao2 = 0;
     int Pontoturistico2 = 0;
-    float areakm2 = 0;
-    float PIB2 = 0;
+    float areakm2 = 0, PIB2 = 0;
     
 
-
     // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
     //carta 1:
     printf("Carta 1");
     printf("Digite o Estado 1: ");
@@ -51,9 +41,9 @@ int main() {
 
     //Calculos carta 1
     float DensidadePopulacional1 = populacao1 / areakm1;
-    float PIBperCapita1 = (PIB1*10000000) / populacao1;
-    float DensidadePopInversa1 = (1/DensidadePopulacional1);
-    float Superpoder1 = (float) populacao1 + areakm1 + PIB1 + Pontoturistico1 + PIBperCapita1 + DensidadePopInversa1;
+    float PIBperCapita1 = (PIB1*10000000.0) / populacao1;
+    float DensidadePopInversa1 = (1.0 /DensidadePopulacional1);
+    float Superpoder1 = DensidadePopInversa1 + (float)populacao1 + areakm1 + PIB1 + (float)Pontoturistico1 + PIBperCapita1;
 
 
     //carta 2:
@@ -81,18 +71,12 @@ int main() {
 
     //Calculos carta 2
     float DensidadePopulacional2 = populacao2 / areakm2;
-    float PIBperCapita2 = (PIB2*10000000) / populacao2;
-    float DensidadePopInversa2 = (1/DensidadePopulacional2);
-    float Superpoder2 = (float) DensidadePopInversa2 + populacao2 + areakm2 + PIB2 + Pontoturistico2 + PIBperCapita2;
-
-
+    float PIBperCapita2 = (PIB2*10000000.0) / populacao2;
+    float DensidadePopInversa2 = (1.0 / DensidadePopulacional2);
+    float Superpoder2 = DensidadePopInversa2 + (float)populacao2 + areakm2 + PIB2 + (float)Pontoturistico2 + PIBperCapita2;
 
     
-    
-
     // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
     //carta 1:
     printf("Carta 1: \n");
     printf("Estado: %s \n", estado1);
